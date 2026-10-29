@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C10000000000000000000001 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* AppSettings.swift */; };
+		C10000000000000000000002 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* Backend.swift */; };
+		C10000000000000000000003 /* GlassHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* GlassHelpers.swift */; };
+		C10000000000000000000004 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* Keychain.swift */; };
+		C10000000000000000000005 /* MatchaMusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* MatchaMusicApp.swift */; };
+		C10000000000000000000006 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000006 /* Models.swift */; };
+		C10000000000000000000007 /* JellyfinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000007 /* JellyfinAPI.swift */; };
+		C10000000000000000000008 /* LocalBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000008 /* LocalBackend.swift */; };
+		C10000000000000000000009 /* LocalFilesBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000009 /* LocalFilesBackend.swift */; };
+		C10000000000000000000010 /* PlexAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000010 /* PlexAPI.swift */; };
+		C10000000000000000000011 /* SubsonicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000011 /* SubsonicAPI.swift */; };
+		C10000000000000000000012 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000012 /* Artwork.swift */; };
+		C10000000000000000000013 /* Downloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000013 /* Downloads.swift */; };
+		C10000000000000000000014 /* Equalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000014 /* Equalizer.swift */; };
+		C10000000000000000000015 /* ListenBrainz.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000015 /* ListenBrainz.swift */; };
+		C10000000000000000000016 /* Lyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000016 /* Lyrics.swift */; };
+		C10000000000000000000017 /* PlayHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000017 /* PlayHistory.swift */; };
+		C10000000000000000000018 /* SpotifyImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000018 /* SpotifyImport.swift */; };
+		C10000000000000000000019 /* StreamCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000019 /* StreamCache.swift */; };
+		C10000000000000000000020 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000020 /* AppModel.swift */; };
+		C10000000000000000000021 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000021 /* Components.swift */; };
+		C10000000000000000000022 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000022 /* ContentView.swift */; };
+		C10000000000000000000023 /* NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000023 /* NowPlaying.swift */; };
+		C10000000000000000000024 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000024 /* Player.swift */; };
+		C10000000000000000000025 /* SettingsScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000025 /* SettingsScreens.swift */; };
+		C10000000000000000000026 /* Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000026 /* Shortcuts.swift */; };
+		C10000000000000000000027 /* SharedSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000027 /* SharedSnapshot.swift */; };
+		C10000000000000000000028 /* SharedSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000027 /* SharedSnapshot.swift */; };
+		C10000000000000000000029 /* MatchaWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000028 /* MatchaWidget.swift */; };
+		C10000000000000000000030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000029 /* Assets.xcassets */; };
+		C10000000000000000000031 /* MatchaWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B10000000000000000000035 /* MatchaWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E10000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D10000000000000000000002;
+			remoteInfo = MatchaWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E10000000000000000000002 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C10000000000000000000031 /* MatchaWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B10000000000000000000001 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		B10000000000000000000002 /* Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
+		B10000000000000000000003 /* GlassHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassHelpers.swift; sourceTree = "<group>"; };
+		B10000000000000000000004 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		B10000000000000000000005 /* MatchaMusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchaMusicApp.swift; sourceTree = "<group>"; };
+		B10000000000000000000006 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B10000000000000000000007 /* JellyfinAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JellyfinAPI.swift; sourceTree = "<group>"; };
+		B10000000000000000000008 /* LocalBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBackend.swift; sourceTree = "<group>"; };
+		B10000000000000000000009 /* LocalFilesBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFilesBackend.swift; sourceTree = "<group>"; };
+		B10000000000000000000010 /* PlexAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlexAPI.swift; sourceTree = "<group>"; };
+		B10000000000000000000011 /* SubsonicAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubsonicAPI.swift; sourceTree = "<group>"; };
+		B10000000000000000000012 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		B10000000000000000000013 /* Downloads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloads.swift; sourceTree = "<group>"; };
+		B10000000000000000000014 /* Equalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equalizer.swift; sourceTree = "<group>"; };
+		B10000000000000000000015 /* ListenBrainz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenBrainz.swift; sourceTree = "<group>"; };
+		B10000000000000000000016 /* Lyrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyrics.swift; sourceTree = "<group>"; };
+		B10000000000000000000017 /* PlayHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayHistory.swift; sourceTree = "<group>"; };
+		B10000000000000000000018 /* SpotifyImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyImport.swift; sourceTree = "<group>"; };
+		B10000000000000000000019 /* StreamCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamCache.swift; sourceTree = "<group>"; };
+		B10000000000000000000020 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		B10000000000000000000021 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		B10000000000000000000022 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B10000000000000000000023 /* NowPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlaying.swift; sourceTree = "<group>"; };
+		B10000000000000000000024 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		B10000000000000000000025 /* SettingsScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreens.swift; sourceTree = "<group>"; };
+		B10000000000000000000026 /* Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts.swift; sourceTree = "<group>"; };
+		B10000000000000000000027 /* SharedSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedSnapshot.swift; sourceTree = "<group>"; };
+		B10000000000000000000028 /* MatchaWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchaWidget.swift; sourceTree = "<group>"; };
+		B10000000000000000000029 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B10000000000000000000030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10000000000000000000031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10000000000000000000032 /* MatchaMusic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MatchaMusic.entitlements; sourceTree = "<group>"; };
+		B10000000000000000000033 /* MatchaWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MatchaWidget.entitlements; sourceTree = "<group>"; };
+		B10000000000000000000034 /* MatchaMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchaMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10000000000000000000035 /* MatchaWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MatchaWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E10000000000000000000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E10000000000000000000004 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000003 /* MatchaMusic */,
+				A10000000000000000000004 /* MatchaWidget */,
+				A10000000000000000000005 /* Shared */,
+				A10000000000000000000006 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10000000000000000000003 /* MatchaMusic */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000007 /* Backend */,
+				A10000000000000000000008 /* Services */,
+				A10000000000000000000009 /* UI */,
+				B10000000000000000000001 /* AppSettings.swift */,
+				B10000000000000000000002 /* Backend.swift */,
+				B10000000000000000000003 /* GlassHelpers.swift */,
+				B10000000000000000000004 /* Keychain.swift */,
+				B10000000000000000000005 /* MatchaMusicApp.swift */,
+				B10000000000000000000006 /* Models.swift */,
+				B10000000000000000000029 /* Assets.xcassets */,
+				B10000000000000000000030 /* Info.plist */,
+				B10000000000000000000032 /* MatchaMusic.entitlements */,
+			);
+			path = MatchaMusic;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000007 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000007 /* JellyfinAPI.swift */,
+				B10000000000000000000008 /* LocalBackend.swift */,
+				B10000000000000000000009 /* LocalFilesBackend.swift */,
+				B10000000000000000000010 /* PlexAPI.swift */,
+				B10000000000000000000011 /* SubsonicAPI.swift */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000008 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000012 /* Artwork.swift */,
+				B10000000000000000000013 /* Downloads.swift */,
+				B10000000000000000000014 /* Equalizer.swift */,
+				B10000000000000000000015 /* ListenBrainz.swift */,
+				B10000000000000000000016 /* Lyrics.swift */,
+				B10000000000000000000017 /* PlayHistory.swift */,
+				B10000000000000000000018 /* SpotifyImport.swift */,
+				B10000000000000000000019 /* StreamCache.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000009 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000020 /* AppModel.swift */,
+				B10000000000000000000021 /* Components.swift */,
+				B10000000000000000000022 /* ContentView.swift */,
+				B10000000000000000000023 /* NowPlaying.swift */,
+				B10000000000000000000024 /* Player.swift */,
+				B10000000000000000000025 /* SettingsScreens.swift */,
+				B10000000000000000000026 /* Shortcuts.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000004 /* MatchaWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000028 /* MatchaWidget.swift */,
+				B10000000000000000000031 /* Info.plist */,
+				B10000000000000000000033 /* MatchaWidget.entitlements */,
+			);
+			path = MatchaWidget;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000005 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000027 /* SharedSnapshot.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000006 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000034 /* MatchaMusic.app */,
+				B10000000000000000000035 /* MatchaWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D10000000000000000000001 /* MatchaMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F10000000000000000000017 /* Build configuration list for PBXNativeTarget "MatchaMusic" */;
+			buildPhases = (
+				E10000000000000000000005 /* Sources */,
+				E10000000000000000000003 /* Frameworks */,
+				E10000000000000000000007 /* Resources */,
+				E10000000000000000000002 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E10000000000000000000009 /* PBXTargetDependency */,
+			);
+			name = MatchaMusic;
+			productName = MatchaMusic;
+			productReference = B10000000000000000000034 /* MatchaMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D10000000000000000000002 /* MatchaWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F10000000000000000000018 /* Build configuration list for PBXNativeTarget "MatchaWidget" */;
+			buildPhases = (
+				E10000000000000000000006 /* Sources */,
+				E10000000000000000000004 /* Frameworks */,
+				E10000000000000000000008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MatchaWidget;
+			productName = MatchaWidget;
+			productReference = B10000000000000000000035 /* MatchaWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					D10000000000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					D10000000000000000000002 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = F10000000000000000000010 /* Build configuration list for PBXProject "MatchaMusic" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10000000000000000000002;
+			productRefGroup = A10000000000000000000006 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D10000000000000000000001 /* MatchaMusic */,
+				D10000000000000000000002 /* MatchaWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E10000000000000000000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C10000000000000000000030 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E10000000000000000000008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E10000000000000000000005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C10000000000000000000001 /* AppSettings.swift in Sources */,
+				C10000000000000000000002 /* Backend.swift in Sources */,
+				C10000000000000000000003 /* GlassHelpers.swift in Sources */,
+				C10000000000000000000004 /* Keychain.swift in Sources */,
+				C10000000000000000000005 /* MatchaMusicApp.swift in Sources */,
+				C10000000000000000000006 /* Models.swift in Sources */,
+				C10000000000000000000007 /* JellyfinAPI.swift in Sources */,
+				C10000000000000000000008 /* LocalBackend.swift in Sources */,
+				C10000000000000000000009 /* LocalFilesBackend.swift in Sources */,
+				C10000000000000000000010 /* PlexAPI.swift in Sources */,
+				C10000000000000000000011 /* SubsonicAPI.swift in Sources */,
+				C10000000000000000000012 /* Artwork.swift in Sources */,
+				C10000000000000000000013 /* Downloads.swift in Sources */,
+				C10000000000000000000014 /* Equalizer.swift in Sources */,
+				C10000000000000000000015 /* ListenBrainz.swift in Sources */,
+				C10000000000000000000016 /* Lyrics.swift in Sources */,
+				C10000000000000000000017 /* PlayHistory.swift in Sources */,
+				C10000000000000000000018 /* SpotifyImport.swift in Sources */,
+				C10000000000000000000019 /* StreamCache.swift in Sources */,
+				C10000000000000000000020 /* AppModel.swift in Sources */,
+				C10000000000000000000021 /* Components.swift in Sources */,
+				C10000000000000000000022 /* ContentView.swift in Sources */,
+				C10000000000000000000023 /* NowPlaying.swift in Sources */,
+				C10000000000000000000024 /* Player.swift in Sources */,
+				C10000000000000000000025 /* SettingsScreens.swift in Sources */,
+				C10000000000000000000026 /* Shortcuts.swift in Sources */,
+				C10000000000000000000027 /* SharedSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E10000000000000000000006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C10000000000000000000029 /* MatchaWidget.swift in Sources */,
+				C10000000000000000000028 /* SharedSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E10000000000000000000009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D10000000000000000000002 /* MatchaWidget */;
+			targetProxy = E10000000000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F10000000000000000000011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F10000000000000000000012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F10000000000000000000013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = MatchaMusic/MatchaMusic.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QD29U585ZA;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MatchaMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.c12n.matchamusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F10000000000000000000014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = MatchaMusic/MatchaMusic.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QD29U585ZA;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MatchaMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.c12n.matchamusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F10000000000000000000015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = MatchaWidget/MatchaWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QD29U585ZA;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MatchaWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.c12n.matchamusic.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F10000000000000000000016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = MatchaWidget/MatchaWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QD29U585ZA;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MatchaWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.c12n.matchamusic.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F10000000000000000000010 /* Build configuration list for PBXProject "MatchaMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10000000000000000000011 /* Debug */,
+				F10000000000000000000012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F10000000000000000000017 /* Build configuration list for PBXNativeTarget "MatchaMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10000000000000000000013 /* Debug */,
+				F10000000000000000000014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F10000000000000000000018 /* Build configuration list for PBXNativeTarget "MatchaWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10000000000000000000015 /* Debug */,
+				F10000000000000000000016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A10000000000000000000001 /* Project object */;
+}
