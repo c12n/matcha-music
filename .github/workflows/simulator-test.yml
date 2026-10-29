@@ -1,0 +1,49 @@
+name: Simulator Test
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  test:
+    name: Install and launch on a simulator
+    runs-on: macos-26
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Generate app icon
+        run: |
+          python3 -m pip install --quiet pillow
+          python3 make_icon.py
+      - name: Show Xcode version
+        run: xcodebuild -version
+      - name: Build for simulator
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project MatchaMusic.xcodeproj \
+            -scheme MatchaMusic \
+            -configuration Debug \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath "$RUNNER_TEMP/dd" \
+            build \
+            CODE_SIGNING_ALLOWED=NO
+      - name: Boot simulator, install and launch
+        run: |
+          set -euo pipefail
+          UDID=$(xcrun simctl list devices available | grep -E "iPhone 1[67]" | head -1 | grep -oE "[0-9A-F-]{36}")
+          echo "Simulator: $UDID"
+          xcrun simctl boot "$UDID" || true
+          xcrun simctl bootstatus "$UDID" -b
+          APP=$(find "$RUNNER_TEMP/dd/Build/Products" -name "MatchaMusic.app" -type d | head -1)
+          test -n "$APP"
+          xcrun simctl install "$UDID" "$APP"
+          xcrun simctl launch "$UDID" com.c12n.matchamusic
+          sleep 5
+          xcrun simctl io "$UDID" screenshot "$RUNNER_TEMP/launch.png"
+          ls -lh "$RUNNER_TEMP/launch.png"
+      - name: Upload screenshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: SimulatorScreenshot
+          path: ${{ runner.temp }}/launch.png
+          if-no-files-found: warn
