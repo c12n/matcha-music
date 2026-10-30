@@ -449,8 +449,8 @@ final class JellyfinAPI: MusicBackend {
             ("IncludeItemTypes", "Audio"), ("Recursive", "true"),
             ("Filters", "IsFavorite"), ("SortBy", "SortName"), ("Fields", libraryFields)
         ]))
-        return response.Items.map { song in
-            var song = song
+        return response.Items.map { dto in
+            var song = mapSong(dto)
             song.isFavourite = true
             return song
         }

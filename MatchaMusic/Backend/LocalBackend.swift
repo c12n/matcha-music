@@ -183,10 +183,12 @@ final class LocalBackend: MusicBackend {
 
     func createPlaylist(name: String, songIDs: [String]) async throws {
         try await ensureAuthorized()
+        let metadata = MPMediaPlaylistCreationMetadata()
+        metadata.name = name
         let playlist: MPMediaPlaylist = try await withCheckedThrowingContinuation { continuation in
             MPMediaLibrary.default().getPlaylist(
                 with: UUID(),
-                creationMetadata: [MPMediaPlaylistPropertyName: name]
+                creationMetadata: metadata
             ) { playlist, error in
                 if let playlist {
                     continuation.resume(returning: playlist)
