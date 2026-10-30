@@ -22,10 +22,17 @@ struct RootView: View {
         Group {
             if isPad {
                 NavigationSplitView {
-                    List(selection: $section) {
+                    List {
                         ForEach(AppSection.allCases) { item in
-                            Label(item.label, systemImage: item.icon)
-                                .tag(item)
+                            Button {
+                                section = item
+                            } label: {
+                                Label(item.label, systemImage: item.icon)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .contentShape(Rectangle())
+                            }
+                            .buttonStyle(.plain)
+                            .listRowBackground(section == item ? Color.accentColor.opacity(0.18) : Color.clear)
                         }
                     }
                     .navigationTitle("Matcha Music")
