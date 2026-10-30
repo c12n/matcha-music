@@ -22,9 +22,11 @@ struct RootView: View {
         Group {
             if isPad {
                 NavigationSplitView {
-                    List(AppSection.allCases, selection: $section) { item in
-                        Label(item.label, systemImage: item.icon)
-                            .tag(item)
+                    List(selection: $section) {
+                        ForEach(AppSection.allCases) { item in
+                            Label(item.label, systemImage: item.icon)
+                                .tag(item)
+                        }
                     }
                     .navigationTitle("Matcha Music")
                 } detail: {
@@ -1057,7 +1059,7 @@ struct PlaylistScreen: View {
                         .font(.body)
                 }
                 .onChange(of: synced) { _, on in
-                    DownloadManager.shared.setPlaylistSynced(playlist, on: on)
+                    DownloadManager.shared.setPlaylistSynced(playlist, on)
                     if on {
                         Task {
                             await model.refreshSyncedPlaylists()

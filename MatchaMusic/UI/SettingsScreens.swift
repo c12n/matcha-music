@@ -498,9 +498,10 @@ struct AddServerScreen: View {
                     .font(.callout)
                     .foregroundStyle(.secondary)
             }
-            ForEach(plexResources.filter { $0.provides.contains("server") }, id: \.name) { resource in
+            ForEach(plexResources.filter { ($0.provides ?? "").contains("server") }, id: \.name) { resource in
                 Button {
-                    guard let uri = bestConnectionURI(for: resource) else { return }
+                    guard let uri = bestConnectionURI(for: resource),
+                          let token = resource.accessToken else { return }
                     let config = ServerConfig.make(
                         name: resource.name,
                         type: .plex,
@@ -508,7 +509,7 @@ struct AddServerScreen: View {
                         username: resource.name,
                         isDefault: model.servers.isEmpty
                     )
-                    model.addServer(config: config, secret: resource.accessToken)
+                    model.addServer(config: config, secret: token)
                     dismiss()
                 } label: {
                     HStack(spacing: 12) {
@@ -517,7 +518,7 @@ struct AddServerScreen: View {
                             Text(resource.name)
                                 .font(.body.weight(.semibold))
                                 .foregroundStyle(.primary)
-                            Text(resource.product)
+                            Text(resource.product ?? "Plex")
                                 .font(.callout)
                                 .foregroundStyle(.secondary)
                         }
@@ -543,7 +544,7 @@ struct AddServerScreen: View {
         if let direct = resource.connections.first(where: { $0.uri.contains("plex.direct") }) {
             return direct.uri
         }
-        if let local = resource.connections.first(where: { $0.local }) {
+        if let local = resource.connections.first(where: { $0.local == true }) {
             return local.uri
         }
         return resource.connections.first?.uri

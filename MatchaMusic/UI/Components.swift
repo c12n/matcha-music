@@ -26,12 +26,10 @@ enum LocalArtwork {
         var image: UIImage?
         if serverID == LocalServerID.files, let url = localFileURL {
             let asset = AVURLAsset(url: url)
-            if let items = try? await asset.loadMetadata(for: .commonKeySpace) {
-                for item in items where item.commonKey == .commonKeyArtwork {
-                    if let data = try? await item.load(.dataValue), let img = UIImage(data: data) {
-                        image = img
-                        break
-                    }
+            for item in asset.commonMetadata where item.commonKey == .commonKeyArtwork {
+                if let data = item.dataValue, let img = UIImage(data: data) {
+                    image = img
+                    break
                 }
             }
         } else if serverID == LocalServerID.library {
@@ -180,7 +178,7 @@ struct ArtworkView: View {
         // 3. Public fallback chain (only artist + album names are sent).
         if model.settings.artworkFallbackEnabled, !album.isEmpty,
            let fallback = await ArtworkResolver.fallbackURL(artist: artist, album: album),
-           let (data, _) = try? await URLSession.shared.data(for: fallback),
+           let (data, _) = try? await URLSession.shared.data(from: fallback),
            let img = UIImage(data: data) {
             image = img
             ArtworkImageCache.shared.setObject(img, forKey: cacheKey as NSString)
